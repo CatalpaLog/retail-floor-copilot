@@ -1,0 +1,10 @@
+[client]
+showErrorDetails = "none"
+toolbarMode = "viewer"
+
+[server]
+maxUploadSize = 10
+headless = true
+
+[browser]
+gatherUsageStats = false

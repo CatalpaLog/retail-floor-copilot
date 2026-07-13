@@ -1,0 +1,3 @@
+﻿promotion_id,promotion_name,rule_type,threshold,discount,discount_rate,eligible_categories,excluded_codes,effective_date,expiry_date,priority
+P202607-A,夏季满减,threshold,800,100,,ALL,FS-QZ-001,2026-07-15,2026-08-15,1
+P202607-B,会员九折,rate,,,0.9,ALL,FS-YR-001,2026-07-15,2026-12-31,2

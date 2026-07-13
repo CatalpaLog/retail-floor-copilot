@@ -1,0 +1,27 @@
+[project]
+name = "retail-floor-copilot"
+version = "2.0.0"
+description = "A AI knowledge, sales enablement and store operations platform for fashion retail store associates."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.30,<1",
+  "pydantic>=2.8,<3",
+  "pandas>=2.2,<3",
+  "scikit-learn>=1.5,<2",
+  "streamlit>=1.59,<2",
+  "streamlit-mic-recorder>=0.0.8,<1",
+  "zxing-cpp>=2.2,<3",
+  "Pillow>=10,<12",
+  "pypinyin>=0.53,<1",
+  "httpx>=0.27,<1",
+  "python-dotenv>=1.0,<2",
+  "openpyxl>=3.1,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
