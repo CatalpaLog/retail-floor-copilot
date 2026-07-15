@@ -16,8 +16,52 @@
 
 公开环境使用模拟商品、库存、门店、人员和经营数据。进入系统后，可在侧边栏切换导购、店长和区域运营角色，查看不同角色的数据范围与操作权限。运行时数据写入隔离的临时工作区，并按配置周期恢复初始状态。
 
+## 系统界面
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <b>导购 AI 知识助手</b><br/>
+      <sub>支持商品编码、吊牌条码、自然语言与语音查询，并集中展示常见问题与最近查询。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/01-associate-copilot.png" alt="导购 AI 知识助手" width="100%"/>
+    </td>
+    <td width="50%" valign="top">
+      <b>顾客需求匹配</b><br/>
+      <sub>基于场景、风格、身形与人群标签组合顾客需求，并生成可解释的商品匹配结果。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/02-customer-match.png" alt="顾客需求匹配" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b>商品知识卡</b><br/>
+      <sub>集中呈现商品卖点、面料、版型、尺码、顾客话术、禁语与库存相关信息。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/03-product-knowledge.png" alt="商品知识卡" width="100%"/>
+    </td>
+    <td width="50%" valign="top">
+      <b>高风险问题确认</b><br/>
+      <sub>店长按风险等级、处理状态、门店范围和时限筛选问题，完成确认、修改、转线下或升级。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/04-manager-review.png" alt="高风险问题确认" width="100%"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <b>区域运营看板</b><br/>
+      <sub>汇总门店活跃度、知识覆盖、高风险拦截、问题分布与治理动作，为区域运营提供决策依据。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/05-regional-dashboard.png" alt="区域运营看板" width="100%"/>
+    </td>
+    <td width="50%" valign="top">
+      <b>Bad Case 闭环</b><br/>
+      <sub>聚合高风险问题与人工负反馈，追踪问题分类、责任人、关联商品或规则、优化与复测状态。</sub><br/><br/>
+      <img src="../../../visual%20studio%20code/APP/retail-floor-copilot-demo/docs/images/06-bad-case.png" alt="Bad Case 闭环" width="100%"/>
+    </td>
+  </tr>
+</table>
+
+> 页面中的商品、库存、价格、人员与经营指标均为公开模拟数据。
+
 ## 目录
 
+- [系统界面](#系统界面)
 - [系统定位](#系统定位)
 - [核心业务闭环](#核心业务闭环)
 - [产品角色与权限](#产品角色与权限)
