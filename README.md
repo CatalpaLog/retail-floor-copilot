@@ -182,46 +182,8 @@ python scripts/run_eval.py
 - 可通过 `DEMO_ACCESS_CODE` 为公开演示增加访问口令；
 - 可通过 `DEMO_ALLOW_CATALOG_WRITES=false` 禁止公开访客永久修改商品、规则和推荐配置。
 
-本项目保留演示角色切换，是为了让面试官快速查看导购、店长和区域运营的完整流程。该角色切换仅用于模拟数据环境，不等同于企业正式身份认证。
+本项目保留演示角色切换，是为了快速查看导购、店长和区域运营的完整流程。该角色切换仅用于模拟数据环境，不等同于企业正式身份认证。
 
-## Streamlit Community Cloud部署
 
-1. 将项目上传到GitHub，确认没有提交：
-   - `.streamlit/secrets.toml`
-   - `.env`
-   - `*.db`
-   - 上传图片和日志
-2. 在Community Cloud创建应用，入口文件选择根目录的：
 
-```text
-streamlit_app.py
-```
 
-3. 在应用的Secrets中粘贴 `.streamlit/secrets.toml.example` 的内容，并按需设置访问口令、API密钥和只读策略。
-4. 推荐公开作品演示配置：
-
-```toml
-APP_MODE = "demo"
-AUTH_MODE = "demo"
-DEMO_RESET_MINUTES = 60
-DEMO_ALLOW_CATALOG_WRITES = false
-SIMULATED_INVENTORY = true
-DEMO_ACCESS_CODE = "自行设置"
-LLM_API_KEY = ""
-```
-
-5. 部署完成后，依次验证导购问答、风险工单、店长审批、Bad Case和区域看板。
-
-完整部署检查见：[docs/09_Deployment_Demo.md](docs/09_Deployment_Demo.md)。
-
-## 密钥与接口保护
-
-- API密钥从环境变量或Streamlit Secrets读取，不写入代码仓库。
-- FastAPI公开部署时建议配置 `API_DEMO_TOKEN`，请求除 `X-User-Id` 外还需携带：
-
-```text
-X-Demo-Token: 你的演示接口令牌
-```
-
-- 当前作品演示使用临时SQLite运行库，不承诺跨重启持久化；这能确保公开访客的操作不会污染仓库数据。
-- 企业正式部署应将身份认证、数据库、文件存储、ERP/POS/WMS连接和监控告警替换为企业基础设施。
